@@ -42,6 +42,24 @@ The API Library Management System is a Java-based application designed to manage
 - **Borrow a book:** `POST /api/borrow/{bookId}/patron/{patronId}`
 - **Return a borrowed book:** `PUT /api/return/{bookId}/patron/{patronId}`
 
+- ## Employee Endpoints
+
+- **Retrieve all employees:** `GET /api/employees`
+  - Retrieves a list of all employees in the system.
+
+- **Retrieve details of a specific employee:** `GET /api/employees/{id}`
+  - Retrieves details of a specific employee by their ID.
+
+- **Add a new employee:** `POST /api/employees`
+  - Adds a new employee to the system.
+
+- **Update an existing employee's information:** `PUT /api/employees/{id}`
+  - Updates the information of an existing employee identified by their ID.
+
+- **Remove an employee:** `DELETE /api/employees/{id}`
+  - Removes an employee from the system based on their ID.
+
+
 ## Authentication
 
 The API Library Management System implements role-based access control:
