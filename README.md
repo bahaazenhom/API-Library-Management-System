@@ -41,8 +41,8 @@ The API Library Management System is a Java-based application designed to manage
 
 - **Borrow a book:** `POST /api/borrow/{bookId}/patron/{patronId}`
 - **Return a borrowed book:** `PUT /api/return/{bookId}/patron/{patronId}`
-
-- ## Employee Endpoints
+  
+### Employee Endpoints
 
 - **Retrieve all employees:** `GET /api/employees`
   - Retrieves a list of all employees in the system.
@@ -58,6 +58,7 @@ The API Library Management System is a Java-based application designed to manage
 
 - **Remove an employee:** `DELETE /api/employees/{id}`
   - Removes an employee from the system based on their ID.
+
 
 
 ## Authentication
