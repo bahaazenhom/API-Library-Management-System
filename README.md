@@ -67,6 +67,5 @@ The API Library Management System implements role-based access control:
 - **Admin:** Full access to all endpoints.
 - **Librarian:** Access to book and patron management endpoints.
 - **Manager:** Access to book and patron management endpoints, as well as borrowing management.
-- **Employee:** No access to management endpoints, only borrowing and returning books.
 
 To authenticate, include the appropriate role in the request headers.
