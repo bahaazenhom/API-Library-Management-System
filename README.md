@@ -4,6 +4,12 @@
 
 The API Library Management System is a Java-based application designed to manage a library's resources, including books, patrons, borrowings, and employees. This system provides a set of RESTful API endpoints for performing CRUD operations on various entities and implements role-based access control for secure access to resources.
 
+
+## Database Setup
+
+The API Library Management System uses a MySQL database. Before running the application, you need to execute the SQL script file to create the necessary tables:
+[MySQL Script File](https://github.com/bahaazenhom/API-Library-Management-System/blob/main/Database%20MySQL%20Script.sql)
+
 ## Running the Application
 
 1. Clone the project from the GitHub repository.
@@ -67,6 +73,5 @@ The API Library Management System implements role-based access control:
 - **Admin:** Full access to all endpoints.
 - **Librarian:** Access to book and patron management endpoints.
 - **Manager:** Access to book and patron management endpoints, as well as borrowing management.
-- **Employee:** No access to management endpoints, only borrowing and returning books.
 
 To authenticate, include the appropriate role in the request headers.
