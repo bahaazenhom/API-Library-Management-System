@@ -46,3 +46,9 @@ CREATE TABLE employee (
   enabled BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
+
+INSERT INTO employee (name, address, email, phone_number, role, user_name, password, enabled)
+VALUES
+    ('Emily Davis', '567 Pine St, Cityville', 'emily@example.com', '111-222-3333', 'ADMIN', 'emily_admin', '{noop}password', TRUE),
+    ('Frank Johnson', '910 Maple St, Villagetown', 'frank@example.com', '444-555-6666', 'MANAGER', 'frank_manager', '{noop}password', TRUE),
+    ('Grace Smith', '123 Cedar St, Hamletville', 'grace@example.com', '777-888-9999', 'LIBRARIAN', 'grace_librarian', '{noop}password', TRUE);
