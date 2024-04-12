@@ -8,8 +8,7 @@ The API Library Management System is a Java-based application designed to manage
 ## Database Setup
 
 The API Library Management System uses a MySQL database. Before running the application, you need to execute the SQL script file to create the necessary tables:
-
-```sql Database MySQL Script.sql
+[MySQL Script File](https://github.com/bahaazenhom/API-Library-Management-System/blob/main/Database%20MySQL%20Script.sql)
 
 ## Running the Application
 
