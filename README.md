@@ -4,6 +4,13 @@
 
 The API Library Management System is a Java-based application designed to manage a library's resources, including books, patrons, borrowings, and employees. This system provides a set of RESTful API endpoints for performing CRUD operations on various entities and implements role-based access control for secure access to resources.
 
+
+## Database Setup
+
+The API Library Management System uses a MySQL database. Before running the application, you need to execute the SQL script file to create the necessary tables:
+
+```sql Database MySQL Script.sql
+
 ## Running the Application
 
 1. Clone the project from the GitHub repository.
