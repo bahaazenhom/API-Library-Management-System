@@ -48,7 +48,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/api/return/**").hasAnyAuthority("LIBRARIAN", "MANAGER", "ADMIN")
                         // Employee endpoints
                         .requestMatchers(HttpMethod.GET, "/api/employees/**").hasAnyAuthority("LIBRARIAN", "MANAGER", "ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/api/employees").hasAuthority("MANAGER")
+                        .requestMatchers(HttpMethod.POST, "/api/employees").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/employees/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasAuthority("ADMIN")
                         .anyRequest().permitAll()
