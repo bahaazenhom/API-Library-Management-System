@@ -15,7 +15,7 @@ public class Borrowing {
     private long id;
 
     @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-    @JsonIgnore
+    @JsonIgnore // To prevent the application from getting a stackOverFlow exception due to the continuous call between Book and Borrowing
     @JoinColumn(name = "book_id")
     private Book book;
     @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})

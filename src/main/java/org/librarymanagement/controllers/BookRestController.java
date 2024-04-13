@@ -1,5 +1,6 @@
 package org.librarymanagement.controllers;
 
+import jakarta.validation.Valid;
 import org.librarymanagement.model.Book;
 import org.librarymanagement.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class BookRestController {
     }
 
     @PostMapping("/books")
-    public ResponseEntity<Book> addBook(@RequestBody Book book) {
+    public ResponseEntity<Book> addBook(@RequestBody@Valid Book book) {
         bookService.addBook(book);
         return ResponseEntity.ok(book);
     }

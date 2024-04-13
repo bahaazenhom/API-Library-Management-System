@@ -1,6 +1,10 @@
 package org.librarymanagement.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.*;
 
@@ -13,25 +17,31 @@ public class Book {
     private int id;
     @Basic
     @Column(name = "title")
+    @NotNull@NotBlank
     private String title;
     @Basic
     @Column(name = "author")
+    @NotNull@NotBlank
     private String author;
     @Basic
     @Column(name = "publication_year")
+    @Min(1900)
+    @Max(2024)
     private Integer publicationYear;
     @Basic
     @Column(name = "isbn")
+    @NotNull
+    @NotBlank
     private String isbn;
     @Basic
     @Column(name = "genre")
     private String genre;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "book",cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-
     private List<Borrowing> borrowings;
     @Basic
     @Column(name = "copies_available")
+    @Min(0)@Max(100)
     private int copiesAvailable;
 
 

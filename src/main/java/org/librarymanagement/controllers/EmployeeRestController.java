@@ -1,5 +1,6 @@
 package org.librarymanagement.controllers;
 
+import jakarta.validation.Valid;
 import org.librarymanagement.model.Employee;
 import org.librarymanagement.service.EmployeeService;
 import org.librarymanagement.service.EmployeeService;
@@ -27,7 +28,7 @@ public class EmployeeRestController {
     }
 
     @PostMapping("/employees")
-    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
+    public ResponseEntity<Employee> addEmployee(@RequestBody@Valid Employee employee) {
         employeeService.addEmployee(employee);
         return ResponseEntity.ok(employee);
     }

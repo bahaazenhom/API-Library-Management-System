@@ -1,6 +1,10 @@
 package org.librarymanagement.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.format.annotation.NumberFormat;
 
 import java.util.Objects;
 
@@ -12,9 +16,11 @@ public class Employee {
     private long id;
     @Basic
     @Column(name = "name")
+    @NotBlank@NotBlank
     private String name;
     @Basic
     @Column(name = "user_name")
+    @NotNull@NotBlank
     private String userName;
 
     @Basic
@@ -22,20 +28,25 @@ public class Employee {
     private String address;
     @Basic
     @Column(name = "email")
+    @Email
     private String email;
     @Basic
     @Column(name = "phone_number")
+    @NumberFormat
     private String phoneNumber;
 
     @Basic
     @Column(name = "password")
+    @NotNull@NotBlank
     private String password;
 
     @Basic
     @Column(name = "role")
+    @NotNull@NotBlank
     private String role;
     @Basic
     @Column(name = "enabled")
+    @NotNull
     private Boolean enabled;
 
 

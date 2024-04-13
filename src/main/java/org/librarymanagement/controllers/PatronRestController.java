@@ -1,5 +1,6 @@
 package org.librarymanagement.controllers;
 
+import jakarta.validation.Valid;
 import org.librarymanagement.model.Patron;
 import org.librarymanagement.service.PatronService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class PatronRestController {
     }
 
     @PostMapping("/patrons")
-    public ResponseEntity<Patron> addPatron(@RequestBody Patron patron) {
+    public ResponseEntity<Patron> addPatron(@RequestBody@Valid Patron patron) {
         patronService.addPatron(patron);
         return ResponseEntity.ok(patron);
     }

@@ -1,6 +1,9 @@
 package org.librarymanagement.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 import java.util.Objects;
@@ -13,15 +16,19 @@ public class Patron {
     private long id;
     @Basic
     @Column(name = "name")
+    @NotNull@NotBlank
     private String name;
     @Basic
     @Column(name = "address")
+    @NotBlank
     private String address;
     @Basic
     @Column(name = "email")
+    @Email
     private String email;
     @Basic
     @Column(name = "phone_number")
+    @NotBlank
     private String phoneNumber;
     @OneToMany(mappedBy = "patron")
     private List<Borrowing> borrowings;
